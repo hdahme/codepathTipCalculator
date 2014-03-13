@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tfPreTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/preTipAmount"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/tfPreTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tfPreTip"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tfPreTipAmount"
+        android:layout_alignLeft="@+id/tfPreTip"
+        android:text="@string/dollarSign"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/tfSplitBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tfTipPercentage"
+        android:layout_below="@+id/tfPreTipAmount"
+        android:layout_marginTop="14dp"
+        android:text="@string/splitOver"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/tfSplitOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tfTipPercentage"
+        android:layout_below="@+id/tfSplitBy"
+        android:ems="10"
+        android:inputType="number"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tfSplitOver"
+        android:layout_alignBottom="@+id/tfSplitOver"
+        android:layout_marginLeft="27dp"
+        android:layout_toRightOf="@+id/tfPreTip"
+        android:text="@string/people"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tfTipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/tfSplitOver"
+        android:layout_marginTop="19dp"
+        android:text="@string/tipPercentage"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tfTipPercentage"
+        android:layout_below="@+id/spTipPercentage"
+        android:layout_marginTop="18dp"
+        android:text="@string/totalAmount"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tfTotalAmount"
+        android:layout_toLeftOf="@+id/tfPreTipAmount"
+        android:text="@string/dollarSign"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/tfTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tfPreTipAmount"
+        android:layout_below="@+id/textTotalAmount"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tfCustomAmount"
+        android:layout_alignRight="@+id/textView2"
+        android:text="@string/percentageSign"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spTipPercentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tfTipPercentage"
+        android:layout_below="@+id/tfTipPercentage"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_weight="1"
+        android:entries="@array/tipPercentages" />
+
+    <EditText
+        android:id="@+id/tfCustomAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spTipPercentage"
+        android:layout_toLeftOf="@+id/textView3"
+        android:layout_toRightOf="@+id/spTipPercentage"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+</RelativeLayout>
